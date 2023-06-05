@@ -21,7 +21,7 @@ class Sqlite:
         async with aiosqlite.connect(self.db_path) as db:
             await db.execute(
                 "CREATE TABLE IF NOT EXISTS transactions (\
-                    transaction TEXT,\
+                    transaction TEXT NO CASE,\
                     date_created TEXT DEFAULT (strftime(\
                         '%Y-%m-%dT%H:%M:%f+00:00', datetime('now'))),\
                     date_modified TEXT DEFAULT (strftime(\

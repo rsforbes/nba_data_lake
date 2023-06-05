@@ -10,9 +10,9 @@ class PlayerGameLogs(NBABaseDB):
         # Create Table
         sql = """
             CREATE TABLE IF NOT EXISTS "{}" (
-                "data" TEXT,
-                "season" TEXT,
-                "season_type" TEXT,
+                "data" TEXT NO CASE,
+                "season" TEXT NO CASE,
+                "season_type" TEXT NO CASE,
                 "total_player_games" INTEGER,
                 CONSTRAINT "uq_{}" UNIQUE("season", "season_type")
             );

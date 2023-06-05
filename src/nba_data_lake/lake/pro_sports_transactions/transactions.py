@@ -76,8 +76,8 @@ class Transactions(BaseDB):
             table="""
                 CREATE TABLE IF NOT EXISTS "{}" (
                     "transaction_id" INTEGER,
-                    "transaction_data" TEXT,
-                    "transaction_type" TEXT,
+                    "transaction_data" TEXT NO CASE,
+                    "transaction_type" TEXT NO CASE,
                     PRIMARY KEY("transaction_id" AUTOINCREMENT)
                 )
                 """,

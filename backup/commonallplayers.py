@@ -12,21 +12,21 @@ class CommonAllPlayers(NBABaseDB):
                 f"""
                     CREATE TABLE IF NOT EXISTS "{self._table}" (
                     "person_id"	INTEGER,
-                    "display_last_comma_first" TEXT,
-                    "display_first_last" TEXT,
+                    "display_last_comma_first" TEXT NO CASE,
+                    "display_first_last" TEXT NO CASE,
                     "rosterstatus" INTEGER,
                     "from_year"	INTEGER,
-                    "to_year" TEXT,
-                    "playercode" TEXT,
-                    "player_slug" TEXT,
+                    "to_year" TEXT NO CASE,
+                    "playercode" TEXT NO CASE,
+                    "player_slug" TEXT NO CASE,
                     "team_id" INTEGER,
-                    "team_city"	TEXT,
-                    "team_name"	TEXT,
-                    "team_abbreviation"	TEXT,
-                    "team_code"	TEXT,
-                    "team_slug"	TEXT,
+                    "team_city"	TEXT NO CASE,
+                    "team_name"	TEXT NO CASE,
+                    "team_abbreviation"	TEXT NO CASE,
+                    "team_code"	TEXT NO CASE,
+                    "team_slug"	TEXT NO CASE,
                     "games_played_flag"	INTEGER,
-                    "otherleague_experience_ch"	TEXT,
+                    "otherleague_experience_ch"	TEXT NO CASE,
                     PRIMARY KEY("person_id"));
                 """
             )

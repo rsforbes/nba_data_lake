@@ -24,20 +24,20 @@ class PlayerGameLogsExtended(NBABaseDB):
         self._sql = self._SQL(
             table="""
                 CREATE TABLE IF NOT EXISTS "{}" (
-                    season_id TEXT,
+                    season_id TEXT NO CASE,
                     player_id INTEGER,
-                    player_name TEXT,
-                    team_name TEXT,
-                    game_id TEXT,
-                    game_date TEXT,
-                    matchup TEXT,
-                    linked_season_id TEXT,
-                    linked_player_id TEXT,
-                    linked_player_name TEXT,
-                    linked_team_name TEXT,
-                    linked_game_id TEXT,
-                    linked_game_date TEXT,
-                    linked_matchup TEXT,
+                    player_name TEXT NO CASE,
+                    team_name TEXT NO CASE,
+                    game_id TEXT NO CASE,
+                    game_date TEXT NO CASE,
+                    matchup TEXT NO CASE,
+                    linked_season_id TEXT NO CASE,
+                    linked_player_id TEXT NO CASE,
+                    linked_player_name TEXT NO CASE,
+                    linked_team_name TEXT NO CASE,
+                    linked_game_id TEXT NO CASE,
+                    linked_game_date TEXT NO CASE,
+                    linked_matchup TEXT NO CASE,
                     days_between_games INTEGER,
                     PRIMARY KEY("player_id","game_id")
                     );

@@ -10,18 +10,18 @@ class PlayersNBA(BaseDB):
         sql = """
                 CREATE TABLE IF NOT EXISTS "prosports.transactions.players.nba" (
                 "player_id"	INTEGER,
-                "player_name" TEXT,
-                "player_names"	TEXT,
-                "team_name"	TEXT,
-                "from_year"	TEXT,
-                "to_year"	TEXT,
+                "player_name" TEXT NO CASE,
+                "player_names"	TEXT NO CASE,
+                "team_name"	TEXT NO CASE,
+                "from_year"	TEXT NO CASE,
+                "to_year"	TEXT NO CASE,
                 "nba_season_id"	INTEGER,
                 "nba_player_id"	INTEGER,
-                "nba_player_name" TEXT,
+                "nba_player_name" TEXT NO CASE,
                 "nba_team_id" INTEGER,
-                "nba_team_name"	TEXT,
-                "nba_from_year"	TEXT,
-                "nba_to_year" TEXT,
+                "nba_team_name"	TEXT NO CASE,
+                "nba_from_year"	TEXT NO CASE,
+                "nba_to_year" TEXT NO CASE,
                 CONSTRAINT "uq_prosports_transactions_players_players" UNIQUE("player_name","team_name"))
                 """
 

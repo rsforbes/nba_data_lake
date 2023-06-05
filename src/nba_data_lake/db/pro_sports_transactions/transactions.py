@@ -43,12 +43,12 @@ class Transactions(BaseDB):
             table="""
                 CREATE TABLE IF NOT EXISTS "{}" (
                 "transaction_id" INTEGER,
-                "transaction_date" TEXT,
-                "team_name"	TEXT,
-                "acquired" TEXT,
-                "relinquished" TEXT,
-                "notes"	TEXT,
-                "transaction_type" TEXT,
+                "transaction_date" TEXT NO CASE,
+                "team_name"	TEXT NO CASE,
+                "acquired" TEXT NO CASE,
+                "relinquished" TEXT NO CASE,
+                "notes"	TEXT NO CASE,
+                "transaction_type" TEXT NO CASE,
                 PRIMARY KEY("transaction_id"))
                 """,
             triggers=[],

@@ -43,10 +43,10 @@ class NBA_SQLite:
         async with aiosqlite.connect(self._path) as db:
             await db.execute(
                 f"CREATE TABLE IF NOT EXISTS {resource} (\
-                    resource TEXT, \
-                    parameters TEXT, \
-                    resultSets TEXT, \
-                    raw TEXT, \
+                    resource TEXT NO CASE, \
+                    parameters TEXT NO CASE, \
+                    resultSets TEXT NO CASE, \
+                    raw TEXT NO CASE, \
                     date_created TEXT DEFAULT (strftime(\
                         '%Y-%m-%dT%H:%M:%f+00:00', datetime('now'))),\
                     date_modified TEXT DEFAULT (strftime(\

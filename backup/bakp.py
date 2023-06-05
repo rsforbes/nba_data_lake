@@ -24,18 +24,20 @@ class ProSportsTransactionsDB:
         logging.info('Creating table "prosports.transactions"')
         async with aiosqlite.connect(self.db_path) as db:
             await db.execute(
-                "CREATE TABLE IF NOT EXISTS \"prosports.transactions\" (\
-                    transaction_id INTEGER PRIMARY KEY,\
-                    date TEXT,\
-                    team TEXT,\
-                    acquired TEXT,\
-                    relinquished TEXT,\
-                    notes TEXT,\
-                    transaction_type TEXT,\
-                    date_created TEXT DEFAULT (strftime(\
-                        '%Y-%m-%dT%H:%M:%f+00:00', datetime('now'))),\
-                    date_modified TEXT DEFAULT (strftime(\
-                        '%Y-%m-%dT%H:%M:%f+00:00', datetime('now'))));"
+                """
+                CREATE TABLE IF NOT EXISTS \"prosports.transactions\" (
+                    transaction_id INTEGER PRIMARY KEY,
+                    date TEXT NO CASE,
+                    team TEXT NO CASE,
+                    acquired TEXT NO CASE,
+                    relinquished TEXT NO CASE,
+                    notes TEXT NO CASE,
+                    transaction_type TEXT NO CASE,
+                    date_created TEXT DEFAULT (strftime(
+                        '%Y-%m-%dT%H:%M:%f+00:00', datetime('now'))),
+                    date_modified TEXT DEFAULT (strftime(
+                        '%Y-%m-%dT%H:%M:%f+00:00', datetime('now'))));
+                """
             )
             await db.commit()
 

@@ -71,16 +71,16 @@ class PlayerGameLogsPlayers(NBABaseDB):
                 """,
             table="""
                 CREATE TABLE IF NOT EXISTS "{}" (
-                    "player_id"	TEXT,
+                    "player_id"	TEXT NO CASE,
                     "team_id"	NUMERIC,
-                    "season_id"	TEXT,
-                    "player_name"	TEXT,
-                    "team_name"	TEXT,
-                    "season"	TEXT,
+                    "season_id"	TEXT NO CASE,
+                    "player_name"	TEXT NO CASE,
+                    "team_name"	TEXT NO CASE,
+                    "season"	TEXT NO CASE,
                     "season_type"	INTEGER,
-                    "season_start_date"	TEXT,
-                    "season_end_date"	TEXT,
-                    "player_start_date"	TEXT,
+                    "season_start_date"	TEXT NO CASE,
+                    "season_end_date"	TEXT NO CASE,
+                    "player_start_date"	TEXT NO CASE,
                     "player_end_date" TEXT
                 );
                 """,

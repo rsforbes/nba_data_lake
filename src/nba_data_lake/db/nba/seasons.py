@@ -50,11 +50,11 @@ class Seasons(NBABaseDB):
             table="""
                     CREATE TABLE IF NOT EXISTS "nba.seasons" (
                         "season_id"	TEXT NOT NULL,
-                        "season"	TEXT,
-                        "start"	TEXT,
-                        "end"	TEXT,
-                        "segment"	TEXT,
-                        "notes"	TEXT,
+                        "season"	TEXT NO CASE,
+                        "start"	TEXT NO CASE,
+                        "end"	TEXT NO CASE,
+                        "segment"	TEXT NO CASE,
+                        "notes"	TEXT NO CASE,
                         PRIMARY KEY("season_id")
                     )
                 """,

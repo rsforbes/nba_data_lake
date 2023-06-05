@@ -19,11 +19,11 @@ class InjuryPlayers(Base):
             sql = f"""
                 CREATE TABLE IF NOT EXISTS "{self._table}" (
                     "player_id"	INTEGER,
-                    "player_name" TEXT,
-                    "player_names" TEXT,
-                    "team_name"	TEXT,
-                    "from_year"	TEXT,
-                    "to_year"	TEXT,
+                    "player_name" TEXT NO CASE,
+                    "player_names" TEXT NO CASE,
+                    "team_name"	TEXT NO CASE,
+                    "from_year"	TEXT NO CASE,
+                    "to_year"	TEXT NO CASE,
                     PRIMARY KEY("player_id" AUTOINCREMENT),
                     CONSTRAINT "uq_prosports_transactions_players" UNIQUE("player_name","team_name")
                 )
