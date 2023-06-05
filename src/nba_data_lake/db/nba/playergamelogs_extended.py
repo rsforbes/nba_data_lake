@@ -25,7 +25,7 @@ class PlayerGameLogsExtended(NBABaseDB):
             table="""
                 CREATE TABLE IF NOT EXISTS "{}" (
                     season_id TEXT,
-                    player_id TEXT,
+                    player_id INTEGER,
                     player_name TEXT,
                     team_name TEXT,
                     game_id TEXT,
@@ -48,8 +48,12 @@ class PlayerGameLogsExtended(NBABaseDB):
                 'CREATE INDEX IF NOT EXISTS "idx.{}.game_date" ON "{}" ("game_date")',
                 """
                 CREATE INDEX IF NOT EXISTS "idx.{}.player_id" ON "{}" ("player_id" DESC,
-                "game_date" DESC,"game_id" DESC)
+                    "game_date" DESC,"game_id" DESC)
                 """,
+                """
+                CREATE INDEX "idx.nba.playergamelogs.extended.season_id" ON 
+                    "nba.playergamelogs.extended" ("season_id")
+                """
             ],
             triggers=[],
             load="""
