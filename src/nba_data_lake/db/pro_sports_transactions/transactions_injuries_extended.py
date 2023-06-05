@@ -75,6 +75,10 @@ class TransactionsInjuriesExtended(BaseDB):
                     "transaction_date",
                     "notes"
                 ) WHERE relinquished != '';
+            """,
+            """
+            CREATE INDEX "idx.prosports.transactions.injuries.extended.nba_season_id"
+            ON "prosports.transactions.injuries.extended" ("nba_season_id")
             """
             ],
             insert="",

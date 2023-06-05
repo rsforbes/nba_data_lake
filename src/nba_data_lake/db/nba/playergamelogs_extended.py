@@ -38,7 +38,7 @@ class PlayerGameLogsExtended(NBABaseDB):
                     linked_game_id TEXT,
                     linked_game_date TEXT,
                     linked_matchup TEXT,
-                    days_between_games TEXT,
+                    days_between_games INTEGER,
                     PRIMARY KEY("player_id","game_id")
                     );
                 """,
@@ -53,6 +53,14 @@ class PlayerGameLogsExtended(NBABaseDB):
                 """
                 CREATE INDEX "idx.nba.playergamelogs.extended.season_id" ON 
                     "nba.playergamelogs.extended" ("season_id")
+                """,
+                """
+                CREATE INDEX IF NOT EXISTS "idx.nba.playergamelogs.extended.player_name"
+                 ON "nba.playergamelogs.extended" (
+                    "player_name",
+                    "season_id",
+                    "game_date"
+                )
                 """
             ],
             triggers=[],
