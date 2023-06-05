@@ -1,0 +1,14 @@
+- Record counts on ProSports and DB are off by around 100; perhaps these are duplicates?
+    - What I actually should be doing is getting raw; 
+    - however...I would actually incur duplicates as there's be no way to check
+    - Perhaps another option in sqlite???
+    Web: ProSportsTransactions; 1937-01-01: 143,417 records
+    DB: ProSportsTransactions; 1937-01-01: 143,396 records
+    Difference 21 Records in total.
+
+DONE:
+ - 
+
+
+ TODO:
+  Days between games need to be reviewed. Likely has errors.

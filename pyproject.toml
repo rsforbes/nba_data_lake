@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "nba-data-lake"
+version = "0.1.0"
+description = ""
+authors = ["Randy Forbes <randy.forbes@gmail.com>"]
+readme = "README.md"
+packages = [{include = "nba_data_lake"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nba-api = "^1.2"
+aiosqlite = "^0.19.0"
+pro-sports-transactions = "^1.0.0"
+apache-airflow-providers-sqlite = {extras = ["common-sql"], version = "^3.3.2"}
+aiofiles = "^23.1.0"
+aiocsv = "^1.2.4"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+pytest = "^7.3.1"
+pytest-asyncio = "^0.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

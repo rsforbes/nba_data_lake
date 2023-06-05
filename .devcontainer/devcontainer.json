@@ -1,0 +1,36 @@
+{
+	"containerEnv": {
+		"AIRFLOW_CONN_SQLITE_DEFAULT": "sqlite:///ext/sqlite/nba.sqlite?mode=rw",
+		"AIRFLOW_HOME": "/workspaces/nba_data_lake/airflow/",
+		"AIRFLOW_VERSION": "2.6.1",
+		"PYTHON_VERSION": "3.11",
+		"PYTHONPATH": "/home/vscode/.cache/pypoetry/virtualenvs/nba-data-lake-5ARuANHH-py3.11/bin/python::/workspaces/nba_data_lake/src"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:latest": {
+			"version": "3.11"
+		},
+		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
+	},
+	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	"mounts": [
+		"source=D:\\Development\\nba\\sqlite,target=/ext/sqlite,type=bind,consistency=cached"
+	],
+	"name": "nba_data",
+	"portsAttributes": {
+		"3000": {
+			"label": "Airflow"
+		}
+	},
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+	"remoteEnv": {
+		"PYTHONUTF8": "1"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	}
+}

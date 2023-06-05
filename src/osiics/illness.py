@@ -1,0 +1,60 @@
+data = [
+    {"Etiology": "Allergic", "ICD-11": "(22)", "OSIICS": "MxA", "Notes": ""},
+    {
+        "Etiology": "Environmental–exercise-related",
+        "ICD-11": "(23)",
+        "OSIICS": "MxE",
+        "Notes": "Heat illness, hypothermia, hyponatraemia, dehydration",
+    },
+    {
+        "Etiology": "Environmental – non-exercise",
+        "ICD-11": "(22/7)",
+        "OSIICS": "MxS",
+        "Notes": "Includes sleep/wake, sunburn",
+    },
+    {
+        "Etiology": "Immunological/inflammatory",
+        "ICD-11": "(4)",
+        "OSIICS": "MxY",
+        "Notes": "",
+    },
+    {
+        "Etiology": "Infection",
+        "ICD-11": "1",
+        "OSIICS": "MxI",
+        "Notes": "Viral, bacterial, parasitic",
+    },
+    {"Etiology": "Neoplasm", "ICD-11": "2", "OSIICS": "MxB", "Notes": ""},
+    {"Etiology": "Metabolic/nutritional", "ICD-11": "5", "OSIICS": "MxN", "Notes": ""},
+    {
+        "Etiology": "Thrombotic/haemorrhagic",
+        "ICD-11": "(11/03)",
+        "OSIICS": "MxV",
+        "Notes": "",
+    },
+    {
+        "Etiology": "Degenerative or chronic condition",
+        "ICD-11": "-",
+        "OSIICS": "MxC",
+        "Notes": "Chronic acquired conditions",
+    },
+    {
+        "Etiology": "Developmental anomaly",
+        "ICD-11": "20",
+        "OSIICS": "MxJ",
+        "Notes": "Includes congenital conditions",
+    },
+    {
+        "Etiology": "Drug-related/poisoning",
+        "ICD-11": "22",
+        "OSIICS": "MxD",
+        "Notes": "Includes pharma, illicit",
+    },
+    {"Etiology": "Multiple", "ICD-11": "", "OSIICS": "MxX", "Notes": ""},
+    {
+        "Etiology": "Unknown, or not specified",
+        "ICD-11": "",
+        "OSIICS": "MxZ",
+        "Notes": "",
+    },
+]
